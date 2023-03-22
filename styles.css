@@ -1,0 +1,48 @@
+h1 {
+    font-family: 'kulim_parkbold';
+}
+
+p {
+    font-family: 'kulim_parkregular';
+}
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#about-me {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+#front-text {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+}
+
+#front-text h1{
+    text-align: center;
+    font-size: 100px;
+}
+
+#front-text p{
+    text-align: left;
+    font-size: 40px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#front-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding-top: 4%;
+
+}
+
+#projects {
+    background-color: #353535;
+}
