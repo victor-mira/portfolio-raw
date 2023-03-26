@@ -1,4 +1,8 @@
-h1 {
+body {
+    padding: 50px;
+}
+
+h1, h2, h3 {
     font-family: 'kulim_parkbold';
 }
 
@@ -6,10 +10,12 @@ p {
     font-family: 'kulim_parkregular';
 }
 
-  .flex-container {
+.flex-container {
     display: flex;
     flex-direction: column;
 }
+
+/* About Me */
 
 #about-me {
     display: flex;
@@ -18,31 +24,233 @@ p {
 }
 
 #front-text {
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 10%;
+    width: 60%;
+    padding-top: 8em;
+    margin-left: 10%;
 }
 
+#front-text:hover #about-me-desc {
+    transform: scale(1.3)
+    translate(4em,0);
+}
+
+#front-text:hover #chevron {
+    opacity: 100%;
+}
+
+
 #front-text h1{
-    text-align: center;
+    text-align: left;
     font-size: 100px;
+    padding-left: 5%;
+
+}
+
+#about-me-desc {
+    transition: transform 0.5s;
+}
+
+#chevron {
+    font-size: 50px;
+    font-family: kulim_parkbold;
+    position: relative;
+    bottom: 3em;
+    left: 15em;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 #front-text p{
+    padding-left: 10%;
     text-align: left;
     font-size: 40px;
-    margin-left: 20%;
-    margin-right: 20%;
 }
 
 #front-img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 45em;
     object-fit: cover;
-    padding-top: 4%;
+    padding-top: 2em;
 
 }
 
+/* Projects */
+
+.section-title {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-size: 70px;
+    margin: 0;
+}
+
+#projects-title {
+    margin-left: 1em;
+    color: white;
+}
+
+#project-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+.project-container{
+    position: relative;
+    width: 30%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+.project-container img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+.project-text {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    background-color: white;
+    color: black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.project-title {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.project-description {
+    padding-left: 25px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
+}
+
+/*TODO change value dynamically*/
+.project-container:hover .project-description {
+    height: 100px;
+}
+
 #projects {
+    padding-bottom: 4em;
     background-color: #353535;
+}
+
+/* Studies */
+
+#studies-title {
+    text-align: right;
+    margin-right: 1em;
+}
+
+#utbm {
+    width: 20%;
+    padding-left: 10em;
+}
+
+#utbm img {
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.5s;
+}
+
+#utbm-desc {
+
+    border-top: solid 10px;
+    position: relative;
+    bottom: 5em;
+    background-color: white;
+    color: black;
+    transition: bottom 0.5s;
+}
+
+#utbm-desc h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 100px;
+    transition: transform 0.5s;
+}
+
+#utbm-desc .date {
+    display: flex;
+    flex-direction: row;
+    margin-top: -20px;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 30px;
+    justify-content: center;
+    transition: transform 0.5s;
+    height: 3em;
+}
+
+#utbm-desc .date p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#utbm-desc .date .line {
+    position: relative;
+    bottom: -15px;
+    text-align: center;
+    border: black 1px solid;
+    width: 0px;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    height: 0;
+    margin-left: 3px;
+    margin-right: 3px;
+    /*transition: padding 0.4s;*/
+}
+
+#utbm-desc .school-desc {
+    position: relative;
+    bottom: 2.8em;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    font-size: 25px;
+    padding-left: 2em;
+    transition: height 0.5s;
+}
+
+/* UTBM anim TODO change flex after event of transform */
+
+
+#utbm:hover img {
+    transform: scale(1.1);
+}
+
+#utbm:hover #utbm-desc{
+    bottom: 10em;
+}
+
+#utbm:hover #utbm-desc h3{
+    transform: scale(0.8) translate(-0.6em);
+}
+
+#utbm:hover #utbm-desc .date{
+    transform: scale(0.9) translate(4.8em, -3em);
+    flex-direction: column;
+}
+
+#utbm:hover #utbm-desc .line{
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+}
+
+#utbm:hover #utbm-desc .school-desc{
+    height: 4em;
 }
