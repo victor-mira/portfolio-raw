@@ -80,7 +80,7 @@ h4, p{
 
 .section-title {
     padding-top: 40px;
-    padding-bottom: 20px;
+    padding-bottom: 1em;
     font-size: 70px;
     margin: 0;
 }
@@ -112,7 +112,6 @@ h4, p{
     object-fit: cover;
     border-radius: 5px;
 }
-
 
 .project-text {
     width: 100%;
@@ -338,3 +337,125 @@ h4, p{
 .univ:hover #uqac-desc{
     bottom: 6em;
 }
+
+/* Work Experience */
+
+#arrow-container{
+    height: 0;
+    width: 0;
+    position: relative;
+}
+
+#arrow {
+    width: 100em;
+    position: absolute;
+    top:6em;
+    left: 3em;
+    display: flex;
+    z-index: -1;/*
+    background-color: blueviolet;*/
+}
+
+#arrow-line {
+    margin-top: 0.4em;
+    width: 88%;
+    background: black;
+    height: 1.3em;
+    float: left;
+    border-radius:0.5em ;
+
+}
+
+#arrow-chevron{
+    width: 3em;
+    height: 3em;
+    border-radius:0.3em ;
+    transform: rotate(-45deg);
+    background: linear-gradient(-45deg, black 50%, transparent 50%);
+    position: relative;
+    left: -2em;
+    top: -0.45em;
+    /*width: 2em;*/
+    /*height: 2em;*/
+    /*border: solid black;*/
+    /*border-radius: 5px;*/
+    /*border-width: 0 1em 1em 0;*/
+    /*display: inline-block;*/
+    /*transform: rotate(-45deg);*/
+    /*margin-left: -2.3em;*/
+
+}
+
+#work-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.enterprise{
+    width: 30%;
+}
+
+.enterprise img {
+    width: 50%;
+    background-color: white;
+    border:  1em;
+    border-radius: 6%;
+    display: block;
+    margin: auto;
+    transition: transform 0.5s;
+}
+.enterprise h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 50px;
+    transition: transform 0.5s;
+    padding-top: 0.1em;
+}
+
+.enterprise-desc {
+    background-color: white;
+    background-attachment: local;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s;
+
+}
+
+.enterprise-desc .date {
+    margin: 0;
+    padding-bottom: 0.5em;
+    text-align: center;
+    font-size: 30px;
+    transition: transform 0.5s;
+}
+
+.work-desc {
+    opacity: 0;
+    transition: opacity 0.5s;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -0.5em;
+    font-size: 25px;
+}
+
+.enterprise:hover img {
+    transform: scale(1.2);
+}
+
+.enterprise:hover .enterprise-desc {
+    transform: translate(0, -2em);
+}
+
+.enterprise:hover .date {
+    transform: translate(0,-0.3em) scale(0.8) ;
+}
+
+.enterprise:hover .work-desc {
+    opacity: 100;
+}
+
+
+
+/* Footer */
