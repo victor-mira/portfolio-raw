@@ -1,12 +1,14 @@
-body {
-    padding: 50px;
-}
+/*body {*/
+/*    padding: 50px;*/
+/*}*/
 
-h1, h2, h3 {
+h1, h2, h3{
     font-family: 'kulim_parkbold';
 }
 
-p {
+
+
+h4, p{
     font-family: 'kulim_parkregular';
 }
 
@@ -25,8 +27,8 @@ p {
 
 #front-text {
     width: 60%;
-    padding-top: 8em;
-    margin-left: 10%;
+    padding-top: 7em;
+    margin-left: 6%;
 }
 
 #front-text:hover #about-me-desc {
@@ -63,14 +65,14 @@ p {
 #front-text p{
     padding-left: 10%;
     text-align: left;
-    font-size: 40px;
+    font-size: 2em;
 }
 
 #front-img {
-    width: auto;
-    height: 45em;
+    width: 50%;
+    height: 40em;
     object-fit: cover;
-    padding-top: 2em;
+    padding-top: 1em;
 
 }
 
@@ -151,12 +153,18 @@ p {
     margin-right: 1em;
 }
 
-#utbm {
+#studies-cards {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5em;
+}
+
+.univ {
     width: 20%;
     padding-left: 10em;
 }
 
-#utbm img {
+.univ img {
     width: 90%;
     display: block;
     margin-left: auto;
@@ -164,27 +172,26 @@ p {
     transition: transform 0.5s;
 }
 
-#utbm-desc {
-
+.univ-desc {
     border-top: solid 10px;
     position: relative;
-    bottom: 5em;
     background-color: white;
     color: black;
     transition: bottom 0.5s;
 }
 
-#utbm-desc h3 {
+.univ-desc h3 {
     margin: 0;
     text-align: center;
-    font-size: 100px;
+}
+
+.univ-title{
     transition: transform 0.5s;
 }
 
-#utbm-desc .date {
+.univ-desc .date {
     display: flex;
     flex-direction: row;
-    margin-top: -20px;
     margin-bottom: 0;
     text-align: center;
     font-size: 30px;
@@ -193,12 +200,12 @@ p {
     height: 3em;
 }
 
-#utbm-desc .date p {
+.univ-desc .date p {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-#utbm-desc .date .line {
+.univ-desc .date .line {
     position: relative;
     bottom: -15px;
     text-align: center;
@@ -212,38 +219,25 @@ p {
     /*transition: padding 0.4s;*/
 }
 
-#utbm-desc .school-desc {
+.univ-desc .school-desc {
     position: relative;
     bottom: 2.8em;
     height: 0;
     overflow: hidden;
     margin: 0;
-    font-size: 25px;
-    padding-left: 2em;
+    font-size: 1.5em;
+    padding-left: 1em;
     transition: height 0.5s;
 }
 
 /* UTBM anim TODO change flex after event of transform */
 
 
-#utbm:hover img {
+.univ:hover img {
     transform: scale(1.1);
 }
 
-#utbm:hover #utbm-desc{
-    bottom: 10em;
-}
-
-#utbm:hover #utbm-desc h3{
-    transform: scale(0.8) translate(-0.6em);
-}
-
-#utbm:hover #utbm-desc .date{
-    transform: scale(0.9) translate(4.8em, -3em);
-    flex-direction: column;
-}
-
-#utbm:hover #utbm-desc .line{
+.univ:hover .univ-desc .line{
     padding-left: 1em;
     padding-right: 1em;
     margin-left: auto;
@@ -251,6 +245,96 @@ p {
     bottom: 0;
 }
 
-#utbm:hover #utbm-desc .school-desc{
+.univ:hover .univ-desc .school-desc{
     height: 4em;
+}
+
+#utbm-desc {
+    bottom: 5em;
+}
+
+#utbm-desc h3 {
+    font-size: 100px;
+}
+
+#utbm-desc  .date{
+    margin-top: -20px;
+}
+
+#utbm:hover .univ-desc .univ-title{
+    transform: scale(0.8) translate(-0.6em);
+}
+
+.univ:hover #utbm-desc .date{
+    transform: scale(0.9) translate(4.4em, -3.2em);
+    flex-direction: column;
+}
+
+.univ:hover #utbm-desc{
+    bottom: 10em;
+}
+
+#famnit-desc {
+    bottom: 2em;
+}
+
+#famnit-desc h3 {
+    font-size: 90px;
+}
+
+#famnit-desc h4{
+    margin-top: -20px;
+    margin-bottom: -0;
+    font-size: 28px;
+    font-family: kulim_parklight;
+    text-align: center;
+    transition: transform 0.5s;
+}
+
+#famnit-date1 {
+    padding-right:0.5em;
+}
+
+#famnit:hover .univ-desc .univ-title{
+    transform: scale(0.8) translate(-3em);
+}
+
+.univ:hover #famnit-desc .date{
+    transform: scale(0.9) translate(4.8em, -3.5em);
+    flex-direction: column;
+}
+
+.univ:hover #famnit-desc .date1{
+    transform: scale(0.8);
+    flex-direction: column;
+    padding-right:0;
+}
+
+.univ:hover #famnit-desc{
+    bottom: 6em;
+}
+
+#uqac-desc {
+    bottom: 2.4em;
+}
+
+#uqac-desc h3 {
+    font-size: 100px;
+}
+
+#uqac-desc  .date{
+    margin-top: -20px;
+}
+
+#uqac:hover .univ-desc .univ-title{
+    transform: scale(0.8) translate(-0.6em);
+}
+
+.univ:hover #uqac-desc .date{
+    transform: scale(0.9) translate(4.4em, -3.2em);
+    flex-direction: column;
+}
+
+.univ:hover #uqac-desc{
+    bottom: 6em;
 }
