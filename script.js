@@ -1,4 +1,4 @@
-const LINKEDIN_LINK = "https://www.linkedin.com/in/victor-mira-56b255174/"
+const LINKEDIN_LINK = "https://www.linkedin.com/in/victor-romain-mira/"
 const GITHUB_LINK = "https://github.com/victor-mira"
 const MAILTO = "mailto:victor.romain.mira@gmail.com"
 const TEL = "tel:+33627246684"
